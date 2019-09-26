@@ -32,4 +32,19 @@ $ go build
 $ ./go-mime-lib-compare > out.md
 ```
 
-See [comparison](out.md)
+See [comparison results](out.md).
+
+### Summary
+
+* [gabriel-vasile/mimetype](https://github.com/gabriel-vasile/mimetype)
+  is written in pure Go and has good detection capablities and uses a
+  hierarchical detection structure.
+* Go wrappers of libmagic have the most accurate MIME type detection.
+  However it entails use of cgo. Further, libmagic is not threadsafe
+  and hence Go wrappers will have to use either `sync.Mutex` or
+  `runtime.LockOSThread`.
+* Although [h2non/filetype](https://github.com/h2non/filetype) is
+  written in pure Go, it doesn't detect a variety of types. Further,
+  surprisingly, its detection is not deterministic. IOW, for the same
+  input file, MIME type detected can be different on each run! This
+  is not recommended for any production use.
