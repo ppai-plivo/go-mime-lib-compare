@@ -12,6 +12,7 @@ import (
 	"github.com/h2non/filetype"
 	"github.com/rakyll/magicmime"
 	"github.com/vimeo/go-magic/magic"
+	"github.com/zRedShift/mimemagic"
 )
 
 var (
@@ -28,9 +29,9 @@ func printContentTypes(testDir string) error {
 
 	fmt.Fprintf(tabW, "## MIME detection capablity comparison\n\n")
 
-	fmt.Fprintf(tabW, "|%s\t%s\t%s\t%s\t%s\t%s\t\n",
-		"File path", "http.DetectContentType", "gabriel-vasile/mimetype", "rakyll/magicmime", "vimeo/go-magic", "h2non/filetype")
-	fmt.Fprintf(tabW, "|---\t---\t---\t---\t---\t---\t\n")
+	fmt.Fprintf(tabW, "|%s\t%s\t%s\t%s\t%s\t%s\t%s\t\n",
+		"File path", "http.DetectContentType", "gabriel-vasile/mimetype", "zRedShift/mimemagic", "rakyll/magicmime", "vimeo/go-magic", "h2non/filetype")
+	fmt.Fprintf(tabW, "|---\t---\t---\t---\t---\t---\t---\t\n")
 
 	return filepath.Walk(testDir, detectContentType)
 }
@@ -61,12 +62,13 @@ func detectContentType(path string, info os.FileInfo, err error) error {
 
 	ctype1 := http.DetectContentType(b)
 	ctype2, _ := mimetype.Detect(b)
-	ctype3, _ := magicmime.TypeByBuffer(b)
-	ctype4 := magic.MimeFromBytes(b)
+	ctype3 := mimemagic.MatchMagic(b).MediaType()
+	ctype4, _ := magicmime.TypeByBuffer(b)
+	ctype5 := magic.MimeFromBytes(b)
 	mtype, _ := filetype.Match(b)
-	ctype5 := mtype.MIME.Type + "/" + mtype.MIME.Subtype
+	ctype6 := mtype.MIME.Type + "/" + mtype.MIME.Subtype
 
-	fmt.Fprintf(tabW, "|%s\t%s\t%s\t%s\t%s\t%s\t\n", path, ctype1, ctype2, ctype3, ctype4, ctype5)
+	fmt.Fprintf(tabW, "|%s\t%s\t%s\t%s\t%s\t%s\t%s\t\n", path, ctype1, ctype2, ctype3, ctype4, ctype5, ctype6)
 
 	return nil
 }

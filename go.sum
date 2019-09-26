@@ -6,3 +6,9 @@ github.com/rakyll/magicmime v0.1.1-0.20180111184428-8698a7074799 h1:rCP36ZOzmG9H
 github.com/rakyll/magicmime v0.1.1-0.20180111184428-8698a7074799/go.mod h1:OKs4S+1GpIAB1PCebhwp3rxhyipe7TiImiIeVyFlQt8=
 github.com/vimeo/go-magic v1.0.0 h1:1GGtwzLJwSd7i24Ie7LSNLF0T/w1NiZn5iELjgWcAy4=
 github.com/vimeo/go-magic v1.0.0/go.mod h1:xvu4I7AcaioNKakZMURKiJPAlHCTFwIr+qQhOOQQfBk=
+github.com/zRedShift/mimemagic v1.1.0 h1:6qU3/VL/FEvBkbNDI82zK/s4uSPt9ihX6a+umlJMeOk=
+github.com/zRedShift/mimemagic v1.1.0/go.mod h1:V9PAYBqahcv5sEGKRax7/Pk3w4/V6MHHK+oX/ADXuu0=
+golang.org/x/net v0.0.0-20181017193950-04a2e542c03f h1:4pRM7zYwpBjCnfA1jRmhItLxYJkaEnsmuAcRtA347DA=
+golang.org/x/net v0.0.0-20181017193950-04a2e542c03f/go.mod h1:mL1N/T3taQHkDXs73rZJwtUhF3w3ftmwwsq0BUmARs4=
+golang.org/x/text v0.3.0 h1:g61tztE5qeGQ89tm6NTjjM9VPIm088od1l6aSorWRWg=
+golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
