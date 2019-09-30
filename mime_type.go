@@ -54,6 +54,8 @@ func detectContentType(path string, info os.FileInfo, err error) error {
 	}
 	defer f.Close()
 
+	// reads the entire file - for most cases, wrapping with io.LimitReader with 1KB
+	// read limit should suffice.
 	b, err := ioutil.ReadAll(f)
 	if err != nil {
 		fmt.Printf("ioutil.ReadAll() failed for path %s: %v\n", path, err)

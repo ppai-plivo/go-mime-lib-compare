@@ -1,5 +1,7 @@
 github.com/gabriel-vasile/mimetype v0.3.19-0.20190924175446-53289f4e5fdf h1:2WZF3Tqjnyvj779IPSTmN5Vn2AUpf1GSUG6S00Q4D0I=
 github.com/gabriel-vasile/mimetype v0.3.19-0.20190924175446-53289f4e5fdf/go.mod h1:kMJbg3SlWZCsj4R73F1WDzbT9AyGCOVmUtIxxwO5pmI=
+github.com/gabriel-vasile/mimetype v0.3.19-0.20190929082809-6be6bfcc51d5 h1:LU2dHWEycQgnAFQPKM2UmBAz0VG/i2Z1le02wJupXkE=
+github.com/gabriel-vasile/mimetype v0.3.19-0.20190929082809-6be6bfcc51d5/go.mod h1:kMJbg3SlWZCsj4R73F1WDzbT9AyGCOVmUtIxxwO5pmI=
 github.com/h2non/filetype v1.0.11-0.20190924181614-60afd77ee3ec h1:vIm9gvLtzaHzij254fAKvbp4PD94YiSjpfrTaiIbiNs=
 github.com/h2non/filetype v1.0.11-0.20190924181614-60afd77ee3ec/go.mod h1:isekKqOuhMj+s/7r3rIeTErIRy4Rub5uBWHfvMusLMU=
 github.com/rakyll/magicmime v0.1.1-0.20180111184428-8698a7074799 h1:rCP36ZOzmG9HqqY0q/j1ltOSzfIeaRYY3HDmvmXU3E0=
